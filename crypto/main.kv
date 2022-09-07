@@ -1,0 +1,41 @@
+<MyLayout>:
+	TextInput:
+		id: crypto_name
+		hint_text: 'Bitcoin'
+		font_size: 28
+		size_hint: 0.4,0.08
+		pos_hint: {'center_x': 0.4, 'center_y': 0.9}
+
+	TextInput:
+		id: start_end
+		hint_text: '2020.10.02:2020.12.05'
+		font_size: 22
+		size_hint: 0.4,0.08
+		pos_hint: {'center_x': 0.4, 'center_y': 0.8}
+
+	Button:
+		id: plot_price
+		size_hint: 0.2,0.08
+		text: 'Plot Price'
+		font_size: 22
+		pos_hint: {'center_x': 0.7, 'center_y': 0.9}
+		on_press: root.plot_crypto()
+
+	Button:
+		id: remove_plot
+		text: 'Remove Plot'
+		size_hint: 0.2,0.08
+		font_size: 22
+		pos_hint: {'center_x': 0.7, 'center_y': 0.8}
+		on_press: root.remove()
+
+	Label:
+		id: error
+		text: "Error!"
+		size_hint: 0.2,0.08
+		font_size: 22
+		pos_hint: {'center_x': 0.7, 'center_y':0.7}
+
+	FloatLayout:
+		id: show_plot
+		orientation: 'vertical'
